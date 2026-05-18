@@ -44,7 +44,7 @@ def make_figure_for_level(level_value: float) -> go.Figure:
             )
         ],
         layout=dict(
-            height=800,
+            height=600,
             uirevision="keep-camera",
             scene=dict(aspectmode="data", uirevision="keep-camera"),
             margin=dict(l=0, r=0, t=0, b=0),
@@ -72,22 +72,25 @@ app_ui = ui.page_sidebar(
             width="100%",
         ),
         width=220,
-        title="Controls",
     ),
     ui.tags.style(
         """
         .bslib-sidebar-layout {
             height: 100vh;
         }
+        .app-title {
+            padding-bottom: 0;
+            transform: translateY(0.12rem);
+        }
         """
     ),
     ui.div(
-        ui.div("Isosurface", class_="text-primary text-center fs-3 mb-2"),
+        ui.div("Isosurface", class_="app-title text-primary text-center fs-3"),
         output_widget("g1"),
         class_="p-2 h-100",
     ),
     fillable=True,
-    title="Isosurface",
+    title="Representation of points that share the same value from a 3D dataset in a unit cube",
     window_title="Isosurface",
 )
 
