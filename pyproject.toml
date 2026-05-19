@@ -11,9 +11,3 @@ dependencies = [
     "shinylive>=0.8.7",
     "shinywidgets>=0.8.1",
 ]
-
-[dependency-groups]
-dev = [
-    "jupyter>=1.1.1",
-    "jupyter-cache>=1.0.1",
-]
